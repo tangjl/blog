@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!-- if changes to css are not reflecting, clear cache with ctrl fn f5-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>In Plain English</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Poiret+One" rel="stylesheet">
+        <link rel="icon" type="image/png" href=""/>
+    </head>
+    <body>
+        <header>
+            <h1>"In Plain English"</h1>
+        </header>
+
+        <div class="container row">
+            <div class="col-9 posts">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="col-3 recent-nav">
+                <h2>Recent Posts</h2>
+                {% for post in posts %}
+                    <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                {% endfor %}
+            </div>
+            <!-- make this into its own template-->
+        </div>
+
+        <footer>
+            © 2017 Jordan Tang | Last updated: 3/3/2017
+        </footer>
+    </body>
+</html>
