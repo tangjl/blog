@@ -1,18 +1,39 @@
 {% load staticfiles %}
 <!-- if changes to css are not reflecting, clear cache with ctrl fn f5-->
+<!-- https://medium.com/google-developer-experts/angular-2-introduction-to-new-http-module-1278499db2a0#.dvxiq7u62 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
         <title>In Plain English</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playball|Roboto|Roboto+Condensed" rel="stylesheet">
+        <script src="https://use.fontawesome.com/c100c02528.js"></script>
         <link rel="icon" type="image/png" href=""/>
     </head>
     <body>
         <header>
-            <h1>"In Plain English"</h1>
+            <div class="header-content">
+                <span class="left">
+                    Brought to you by Jordan Tang
+                </span>
+                <span class="right">
+                    Follow: 
+                    <a target="_blank" class="icon-link" href="https://www.linkedin.com/in/jordan-tang/"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+                    <a target="_blank" class="icon-link" href="https://github.com/tangjl/"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                    <a target="_blank" class="icon-link" href="https://www.instagram.com/shakespls/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a> 
+                </span>
+            </div>
         </header>
+        <div class="top-container">
+            <h1>"In Plain English"</h1>
+        </div>
+
+        <ul class="nav-bar row-12">
+            <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="">About: Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="">About: Writer</a></li>
+        </ul>
 
         <div class="container row">
             <div class="col-9 posts">
@@ -29,7 +50,9 @@
         </div>
 
         <footer>
-            © 2017 Jordan Tang | Last updated: 3/3/2017
+            <div class="footer-content">
+                © 2017 Jordan Tang | All Rights Reserved | Last updated: 3/3/2017
+            </div>
         </footer>
     </body>
 </html>
