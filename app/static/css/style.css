@@ -21,6 +21,33 @@ header {
     color: #000;
     margin-left: 5px;
 }
+.icon-link-2 {
+    color: #000;
+    margin-right: 5px;
+}
+.icon-side {
+    margin-right: 10px;
+}
+hr {
+    border-top: 2px solid #e8e8e8;
+}
+.badge {
+    display: flex;
+    font-size: 11px;
+    border: 2px solid #e8e8e8;
+    padding: 10px 15px;
+    border-radius: 75px;
+    width: fit-content;
+    float: right;
+    margin-top: 40px;
+}
+.icon {
+    width: 80px;
+    height: auto;
+}
+.bolded {
+    font-weight: 900;
+}
 .left {
     display: flex;
     align-items: center;
@@ -33,17 +60,19 @@ h1 {
     margin: 0;
     text-shadow: 5px 5px #000;
 }
+h2 {
+    display: inline;
+    font-size: 24px;
+}
 h2 a {
     font-size: 24px;
     color: #000;
     text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 h3 a {
-    font-size: 20px;
+    font-size: 16px;
     color: #000;
     text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 .logo {
     width: 32px;
@@ -89,8 +118,24 @@ p {
 }
 .container {
     width: 100%;
-    padding: 15px;
+    padding: 25px 15px;
+}
+.inner-container {
+    width: 100%;
+    padding: 25px 15px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.home {
+    width: 100%;
     display: initial;
+}
+.edit {
+    color: #000;
+    text-decoration: none;
+    margin-left: 10px;
 }
 footer {
     background-color: #e8e8e8;
@@ -102,13 +147,18 @@ footer {
     padding: 20px;
     width: 100%;
 }
+.link {
+    color: #000;
+}
 .posts {
-    padding: 15px;
     margin-right: 25px;
 }
 .recent-nav {
-    padding: 25px;
+    padding: 10px;
     background-color: #e8e8e8;
+}
+.recent-nav h2 {
+    font-size: 18px;
 }
 * {
     box-sizing: border-box;
@@ -140,13 +190,19 @@ footer {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     h1 {font-size: 75px;}
-    .container {padding: 25px; display: flex;}
+    .container {padding: 25px; width: 80%;}
+    .home {display: flex;}
     p {font-size: 16px;}
     h2 a {font-size: 30px;}
+    h2 {font-size: 30px;}
     .subtext {font-size: 16px;}
     .nav-bar {padding: 18px 0px;}
     .nav-link {font-size: 14px;}
     .header-content {width: 80%;}
     .footer-content {width: 80%;}
     .header-text {display: initial;}
+    .badge {font-size: 14px; padding: 10px 15px;}
+    .icon {width: 110px;}
+    .recent-nav {padding: 20px;}
+    .inner-container {width: 60%;}
 }

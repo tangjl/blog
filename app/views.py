@@ -40,3 +40,8 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'app/post_edit.html', {'form': form})
 
+def about_writer(request):
+    return render(request, 'app/about_writer.html')
+
+def about_blog(request):
+    return render(request, 'app/about_blog.html')

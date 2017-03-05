@@ -1,12 +1,22 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p class="subtext">Published: {{ post.published_date }}</p>
-            <p>{{ post.text|linebreaksbr }}</p>
+    <div class="container">
+        <div class="row home">
+            <div class="col-9 posts">
+                {% for post in posts %}
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p class="subtext">Published: {{ post.published_date }}</p>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                {% endfor %}
+            </div>
+            <div class="col-3 recent-nav">
+                <h2>Recent Posts</h2>
+                {% for post in posts %}
+                    <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}
+    </div>
 {% endblock %}
         

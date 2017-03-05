@@ -7,7 +7,7 @@
         <title>"In Plain English"</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Playball|Roboto|Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playball|Roboto" rel="stylesheet">
         <script src="https://use.fontawesome.com/c100c02528.js"></script>
         <link rel="icon" type="image/png" href="../../static/images/logo.png"/>
     </head>
@@ -15,7 +15,7 @@
         <header>
             <div class="header-content">
                 <span class="left">
-                    <a href="http://www.jordantang.com/"><img src="../../static/images/logo.png" class="logo"></a>
+                    <a target="_blank" href="http://www.jordantang.com/"><img src="../../static/images/logo.png" class="logo"></a>
                     <span class="header-text">Brought to you by Jordan Tang</span>
                 </span>
                 <span class="right">
@@ -32,25 +32,16 @@
 
         <ul class="nav-bar row-12">
             <li class="nav-item"><a class="nav-link" href="{% url 'post_list' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="">About: Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="">About: Writer</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about_blog' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about_writer' %}">Writer</a></li>
             {% if user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'post_new' %}">New Post</a></li>
             {% endif %}
         </ul>
 
-        <div class="container row">
-            <div class="col-9 posts">
-                {% block content %}
-                {% endblock %}
-            </div>
-            <div class="col-3 recent-nav">
-                <h2>Recent Posts</h2>
-                {% for post in posts %}
-                    <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-                {% endfor %}
-            </div>
-            <!-- make this into its own template-->
+        <div class="wrapper">
+            {% block content %}
+            {% endblock %}
         </div>
 
         <footer>
