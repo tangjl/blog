@@ -5,21 +5,25 @@ body {
 header {
     display: flex;
     justify-content: center;
-    font-size: 14px;
 }
 .header-content {
     width: 100%;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 8px;
+}
+.header-text {
+    display: none;
 }
 .icon-link {
     color: #000;
     margin-left: 5px;
 }
 .left {
-    display: none;
-}
-.right {
-    float: right;
+    display: flex;
+    align-items: center;
 }
 h1 {
     font-size: 34px;
@@ -41,6 +45,11 @@ h3 a {
     text-decoration: none;
     font-family: 'Roboto Condensed', sans-serif;
 }
+.logo {
+    width: 32px;
+    height: 26px;
+    margin-right: 10px;
+}
 .subtext {
     color: #848484;
     font-size: 14px;
@@ -50,7 +59,7 @@ p {
 }
 .top-container {
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../../static/images/header.jpg) no-repeat center;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../static/images/header.jpg) no-repeat center;
     background-size: cover;
     text-align: center;
     display: flex;
@@ -138,6 +147,6 @@ footer {
     .nav-bar {padding: 18px 0px;}
     .nav-link {font-size: 14px;}
     .header-content {width: 80%;}
-    .left {display: initial;}
     .footer-content {width: 80%;}
+    .header-text {display: initial;}
 }
