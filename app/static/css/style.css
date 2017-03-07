@@ -71,6 +71,16 @@ h3 a {
     color: #000;
     text-decoration: none;
 }
+h4 {
+    color: #FFF;
+    margin: 0;
+    font-size: 16px;
+}
+h5 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
 .logo {
     width: 32px;
     height: 26px;
@@ -79,6 +89,11 @@ h3 a {
 .subtext {
     color: #848484;
     font-size: 14px;
+}
+.log {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
 }
 p {
     font-size: 14px;
@@ -104,7 +119,7 @@ p {
     padding: 12px 0;
 }
 .nav-item {
-    margin: 0px 10px;
+    margin: 0px 8px;
 }
 .nav-link {
     text-decoration: none;
@@ -157,6 +172,28 @@ footer {
 .recent-nav h2 {
     font-size: 18px;
 }
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e8e8e8;
+    margin: 50px 0;
+    padding: 30px 40px;
+}
+.login-button {
+    border: none;
+    background-color: #1F2024;
+    font-size: 14px;
+    color: #FFF;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: block;
+}
 * {
     box-sizing: border-box;
 }
@@ -202,4 +239,5 @@ footer {
     .icon {width: 110px;}
     .recent-nav {padding: 20px;}
     .inner-container {width: 60%;}
+    .nav-item {margin: 0 15px;}
 }

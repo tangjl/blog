@@ -1,11 +1,16 @@
 {% extends "app/base.html" %}
 
 {% block content %}
+<div class="login-container col-6">
+
+    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+    <h5>LOGIN</h5>
+
     {% if form.errors %}
         <p>Username or password invalid. Please try again.</p>
     {% endif %}
 
-    <form method="post" action="{% url 'login' %}">
+    <form class="login" method="post" action="{% url 'login' %}">
         {% csrf_token %}
         <table>
             <tr>
@@ -18,7 +23,8 @@
             </tr>
         </table>
 
-        <input type="submit" value="login"/>
+        <input type="submit" class="login-button" value="SUBMIT"/>
         <input type="hidden" name="next" value="{{ next }}"/>
     </form>
+</div>
 {% endblock %}
