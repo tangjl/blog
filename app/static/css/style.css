@@ -34,12 +34,9 @@ hr {
 .badge {
     display: flex;
     font-size: 11px;
-    border: 2px solid #e8e8e8;
     padding: 10px 15px;
-    border-radius: 75px;
     width: fit-content;
-    float: right;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .icon {
     width: 80px;

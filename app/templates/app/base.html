@@ -35,7 +35,12 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'about_blog' %}">About</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'about_writer' %}">Writer</a></li>
             {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'post_new' %}">New Post</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'post_new' %}">New</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log out</a></li>
+            <!-- {{ user.username }}  -->
+            {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log in</a></li>    
             {% endif %}
         </ul>
 
