@@ -18,7 +18,7 @@
                     <a target="_blank" href="http://www.jordantang.com/"><img src="../../static/images/logo.png" class="logo"></a>
                     <span class="header-text">Brought to you by Jordan Tang</span>
                 </span>
-                <span>
+                <span class="right">
                     {% if user.is_authenticated %}
                     <a class="log" href="{% url 'logout' %}">Log out</a>
                     {% else %}
@@ -62,7 +62,7 @@
                         Last updated: 3/7/2017<br>
                     </div>
                 </span>
-                <span class="right">
+                <span class="right-footer">
                     <span class="bolded">Follow:</span>
                     <a target="_blank" class="icon-link-3" href="https://www.linkedin.com/in/jordan-tang/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                     <a target="_blank" class="icon-link-3" href="https://github.com/tangjl/"><i class="fa fa-github" aria-hidden="true"></i></a>
