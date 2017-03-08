@@ -1,18 +1,19 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<div class="login-container col-6">
+<div class="login-container">
 
     <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
     <h5>LOGIN</h5>
+    <hr>
 
     {% if form.errors %}
         <p>Username or password invalid. Please try again.</p>
     {% endif %}
 
-    <form class="login" method="post" action="{% url 'login' %}">
+    <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <table>
+        <table class="login-table">
             <tr>
                 <td>{{ form.username.label_tag }}</td>
                 <td>{{ form.username }}</td>

@@ -5,12 +5,18 @@
         <div class="row home">
             <div class="col-9 posts">
                 {% for post in posts %}
-                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                    <p class="subtext">Published: {{ post.published_date }}</p>
-                    <p>{{ post.text|linebreaksbr }}</p>
+                    <div class="card">
+                        <div class="bar">
+                            Published: {{ post.published_date }}
+                        </div>
+                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                        <hr>
+                        <p class="subtext">Comments: {{ post.approved_comments.count }}</p>
+                        <p>{{ post.text|linebreaksbr|truncatechars:500 }}</p>
+                    </div>
                 {% endfor %}
             </div>
-            <div class="col-3 recent-nav">
+            <div class="recent-nav">
                 <h2>Recent Posts</h2>
                 {% for post in posts %}
                     <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>

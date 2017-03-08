@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
     padding: 8px;
 }
 .header-text {
@@ -25,18 +25,38 @@ header {
     color: #000;
     margin-right: 5px;
 }
+.icon-link-3 {
+    border: 1px solid #000;
+    color: #000;
+    padding: 8px;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: 0.5s;
+    font-size: 16px;
+}
+.icon-link-3:hover {
+    background-color: #000;
+    color: #FFF;
+}
+.icon-link-4 {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
 .icon-side {
     margin-right: 10px;
 }
 hr {
     border-top: 2px solid #e8e8e8;
+    width: 100%;
 }
 .badge {
     display: flex;
     font-size: 11px;
     padding: 10px 15px;
     width: fit-content;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 .icon {
     width: 80px;
@@ -48,6 +68,16 @@ hr {
 .left {
     display: flex;
     align-items: center;
+}
+.left-footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.right {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
 }
 h1 {
     font-size: 34px;
@@ -74,11 +104,13 @@ h3 a {
 h4 {
     color: #FFF;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.75);
+    padding: 15px 20px;
+    border-radius: 5px;
 }
 h5 {
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin: 0;
     font-size: 20px;
 }
 .logo {
@@ -86,14 +118,28 @@ h5 {
     height: 26px;
     margin-right: 10px;
 }
+.logo-2 {
+    width: 65px;
+    height: 52px;
+    margin-right: 10px;
+    display: none;
+}
 .subtext {
-    color: #848484;
+    color: #9b9b9b;
     font-size: 14px;
 }
 .log {
     color: #000;
     text-decoration: none;
     font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 2px 8px;
+    transition: 0.5s;
+}
+.log:hover {
+    background-color: #000;
+    color: #FFF;
 }
 p {
     font-size: 14px;
@@ -116,7 +162,7 @@ p {
     list-style: none;
     background-color: #1F2024;
     margin: 0;
-    padding: 12px 0;
+    padding: 15px 0;
 }
 .nav-item {
     margin: 0px 8px;
@@ -126,15 +172,35 @@ p {
     color: #FFF;
     font-size: 12px;
     letter-spacing: 1px;    
-    transition: 0.4s;
+}
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1F2024; 
+    color: #FFF;
+    padding: 10px 15px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+    box-shadow: 0px 0px 10px #e8e8e8;
+    padding: 25px;
+    padding-top: 60px;
+    position: relative;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 50px;
 }
 .container {
     width: 100%;
-    padding: 25px 15px;
+    padding: 40px 15px;
 }
 .inner-container {
     width: 100%;
-    padding: 25px 15px;
+    padding: 75px 15px;
 }
 .wrapper {
     display: flex;
@@ -149,15 +215,25 @@ p {
     text-decoration: none;
     margin-left: 10px;
 }
+.bolded {
+    font-weight: 900;
+}
+.underlined {
+    text-decoration: underline;
+}
 footer {
     background-color: #e8e8e8;
-    font-size: 14px;
     display: flex;
     justify-content: center;
 }
 .footer-content {
-    padding: 20px;
+    padding: 25px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
 }
 .link {
     color: #000;
@@ -168,6 +244,8 @@ footer {
 .recent-nav {
     padding: 10px;
     background-color: #e8e8e8;
+    width: 200px;
+    float: left;
 }
 .recent-nav h2 {
     font-size: 18px;
@@ -177,22 +255,29 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #e8e8e8;
-    margin: 50px 0;
-    padding: 30px 40px;
+    margin: 75px 5px;
+}
+.login-table {
+    margin: 25px 0;
 }
 .login-button {
-    border: none;
-    background-color: #1F2024;
+    border: 1px solid #000;
+    background-color: #FFF;
+    border-radius: 5px;
+    font-weight: 900;
     font-size: 14px;
-    color: #FFF;
     letter-spacing: 1px;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 8px 15px;
     display: block;
+    transition: 0.5s;
+}
+.login-button:hover {
+    background-color: #000;
+    color: #FFF;
 }
 * {
     box-sizing: border-box;
@@ -224,7 +309,7 @@ footer {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     h1 {font-size: 75px;}
-    .container {padding: 25px; width: 80%;}
+    .container {width: 80%;}
     .home {display: flex;}
     p {font-size: 16px;}
     h2 a {font-size: 30px;}
@@ -238,6 +323,12 @@ footer {
     .badge {font-size: 14px; padding: 10px 15px;}
     .icon {width: 110px;}
     .recent-nav {padding: 20px;}
-    .inner-container {width: 60%;}
+    .inner-container {width: 600px;}
     .nav-item {margin: 0 15px;}
+    .logo-2 {display: initial;}
+    .footer-content {flex-direction: row;}
+    .right {margin-top: 0px;}
+    .left-footer {text-align: left;}
+    .bar {font-size: 16px;}
+    .icon-link-3 {font-size: 20px; padding: 10px;}
 }
