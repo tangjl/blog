@@ -17,9 +17,12 @@
                 {% endfor %}
             </div>
             <div class="recent-nav">
-                <h2>Recent Posts</h2>
+                <div class="bar">
+                    <h6>Recent Posts</h6>
+                </div>
                 {% for post in posts %}
                     <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                    <span>{{ post.published_date|date:'m-d-Y' }}</span>
                 {% endfor %}
             </div>
         </div>
