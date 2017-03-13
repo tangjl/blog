@@ -325,6 +325,7 @@ footer {
 .login-table {
     margin: 25px 0;
 }
+
 .login-button {
     border: 1px solid #000;
     background-color: #FFF;
@@ -338,11 +339,22 @@ footer {
     margin-top: 20px;
     padding: 8px 15px;
     display: block;
+    width: fit-content;
     transition: 0.5s;
 }
 .login-button:hover {
     background-color: #000;
     color: #FFF;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-label {
+    font-size: 20px;
+    font-weight: 900;
 }
 * {
     box-sizing: border-box;

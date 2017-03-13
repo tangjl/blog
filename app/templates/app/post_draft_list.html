@@ -8,7 +8,7 @@
                 Created: {{ post.created_date|date:'m-d-Y' }}
                 <a class="icon-link-4" href="{% url 'post_detail' pk=post.pk %}"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
             </div>
-            <h2>{{ post.title }}</h2>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <hr>
             <p>{{ post.text|truncatechars:500 }}</p>
         </div>

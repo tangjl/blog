@@ -8,7 +8,7 @@
     <hr>
 
     {% if form.errors %}
-        <p>Username or password invalid. Please try again.</p>
+        <p class="bolded">Username or password invalid. Please try again.</p>
     {% endif %}
 
     <form method="post" action="{% url 'login' %}">
