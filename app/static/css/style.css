@@ -344,6 +344,10 @@ footer {
     background-color: #000;
     color: #FFF;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+}
 .form-container {
     display: flex;
     flex-direction: column;

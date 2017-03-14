@@ -43,7 +43,9 @@
             {% empty %}
                 <p>No comments yet. Be the first to break the silence!</p>
             {% endfor %}
-            <a class="add-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">ADD COMMENT</a>
+            <div class="button-container">
+                <a class="add-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">ADD COMMENT</a>
+            </div>  
             {% endif %}
     </div>
 
