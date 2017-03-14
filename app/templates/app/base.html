@@ -14,13 +14,13 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Playball|Roboto" rel="stylesheet">
         <script src="https://use.fontawesome.com/c100c02528.js"></script>
-        <link rel="icon" type="image/png" href="../../static/images/logo.png"/>
+        <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}"/>
     </head>
     <body>
         <header>
             <div class="header-content">
                 <span class="left">
-                    <a target="_blank" href="http://www.jordantang.com/"><img src="../../static/images/logo.png" class="logo"></a>
+                    <a target="_blank" href="http://www.jordantang.com/"><img src="{% static 'images/logo.png' %}" class="logo"></a>
                     <span class="header-text">Brought to you by Jordan Tang</span>
                 </span>
                 <span class="right">
@@ -60,7 +60,7 @@
         <footer>
             <div class="footer-content">
                 <span class="left-footer">
-                    <a target="_blank" href="http://www.jordantang.com/"><img src="../../static/images/logo.png" class="logo-2"></a>
+                    <a target="_blank" href="http://www.jordantang.com/"><img src="{% static 'images/logo.png' %}" class="logo-2"></a>
                     <div>
                         <span class="bolded">© 2017 Jordan Tang</span><br>
                         All Rights Reserved<br>

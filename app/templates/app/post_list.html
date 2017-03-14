@@ -12,7 +12,7 @@
                         <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                         <hr>
                         <p class="subtext">Comments: {{ post.approved_comments.count }}</p>
-                        <p>{{ post.text|linebreaksbr|truncatechars:500 }}</p>
+                        <p>{{ post.text|linebreaksbr|truncatechars:250 }}</p>
                     </div>
                 {% endfor %}
             </div>

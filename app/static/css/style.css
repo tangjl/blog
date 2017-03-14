@@ -322,10 +322,6 @@ footer {
     flex-direction: column;
     margin: 75px 5px;
 }
-.login-table {
-    margin: 25px 0;
-}
-
 .login-button {
     border: 1px solid #000;
     background-color: #FFF;
