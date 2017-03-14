@@ -13,17 +13,13 @@
 
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <table class="login-table">
-            <tr>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-        </table>
-
+        <div class="form-container">
+            <label for="id_username" class="title-label">Username:</label>
+            <input id="id_username" class="login-field" type="text" value="{{ form.username.value|default_if_none:"" }}" name="username" maxlength="100" required />
+            <br>
+            <label for="id_password" class="title-label">Password:</label>
+            <input id="id_password" class="login-field" type="password" value="{{ form.password.value|default_if_none:"" }}" name="password" maxlength="100" required />
+        </div>
         <input type="submit" class="login-button" value="SUBMIT"/>
     </form>
 </div>

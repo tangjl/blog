@@ -4,8 +4,15 @@
     <div class="inner-container">
         <h2>New comment</h2>
         <hr>
-        <form method="POST">{% csrf_token %} 
-            {{ form.as_p }}
+        <form method="POST">
+            {% csrf_token %} 
+            <div class="form-container">
+                <label for="id_author" class="title-label">Name:</label>
+                <input id="id_author" class="title-field" type="text" name="author" maxlength="100" required />
+                <br>
+                <label for="id_text" class="title-label">Comment:</label>
+                <textarea id="id_text" class="text-field" type="text" name="text" required></textarea>
+            </div>
             <button type="submit" class="login-button">Send</button>
         </form>
     </div>
