@@ -15,12 +15,29 @@
                         <p>{{ post.text|linebreaksbr|truncatechars:250 }}</p>
                     </div>
                 {% endfor %}
+                <ul class="paginator">
+                    &nbsp;
+                    {% if posts.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ posts.previous_page_number }}"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Prev</a>
+                    </li>
+                    {% endif %}
+                    <li class="page-of page-item">
+                        Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+                    </li>
+                    {% if posts.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ posts.next_page_number }}">Next&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </li>
+                    &nbsp;
+                    {% endif %}
+                </ul>
             </div>
             <div class="recent-nav">
                 <div class="bar">
                     <h6>Recent Posts</h6>
                 </div>
-                {% for post in posts %}
+                {% for post in published_posts %}
                     <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
                     <span>{{ post.published_date|date:'m/d/Y' }}</span>
                 {% endfor %}

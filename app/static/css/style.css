@@ -305,8 +305,35 @@ footer {
 .link {
     color: #000;
 }
+.page-of {
+    font-weight: 700;
+    margin: 0 5px;
+}
+.page-link {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px; 
+    padding: 3px 10px;
+    font-weight: 700;
+    transition: 0.5s;
+}
 .posts {
     margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.paginator {
+    margin-top: 0;
+    margin-bottom: 40px;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.page-item {
+    display: inline;
 }
 .recent-nav {
     background-color: #e8e8e8;
@@ -340,7 +367,7 @@ footer {
     display: block;
     transition: 0.5s;
 }
-.login-button:hover {
+.login-button:hover, .page-link:hover {
     background-color: #000;
     color: #FFF;
 }
@@ -378,6 +405,14 @@ footer {
     font-family: inherit;
     font-size: inherit;
     padding: 5px;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-pencil-square-o {
+    margin-top: 2.5px;
 }
 * {
     box-sizing: border-box;
@@ -433,5 +468,6 @@ footer {
     .icon-link-3 {font-size: 20px; padding: 10px;}
     .recent-nav {width: 200px;}
     .card {padding: 25px; padding-top: 60px;}
+    .paginator {font-size: 15px;}
     .comment-card {padding: 25px; padding-top: 40px;}
 }
